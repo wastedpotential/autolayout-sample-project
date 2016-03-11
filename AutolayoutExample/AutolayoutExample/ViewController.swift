@@ -16,12 +16,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phone1ErrorLabel: UILabel!
     @IBOutlet weak var phone1ErrorHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var phone2TextField: UITextField!
+    @IBOutlet weak var phone2ErrorLabel: UILabel!
+    @IBOutlet weak var phone2ErrorHeightConstraint: NSLayoutConstraint!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phone1ErrorHeightConstraint.constant = 0
+        phone2ErrorHeightConstraint.constant = 0
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +41,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         textField.layoutSubviews() //this line fixes an animation bug in the textfield
         validatePhone1()
+        validatePhone2()
+
     }
     
     
@@ -57,6 +64,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             else {
                 hideError(phone1TextField, errorHeightConstraint:phone1ErrorHeightConstraint) //remove any existing errors
+                return true
+            }
+        }
+        return true
+    }
+    
+    func validatePhone2() -> Bool {
+        if let phoneNumber = phone2TextField.text {
+            if phoneNumber.characters.count > 0 {
+                showError(phone2TextField, errorLabel:phone2ErrorLabel, errorHeightConstraint:phone2ErrorHeightConstraint, errorText: "There is another error")
+                return false
+            }
+            else {
+                hideError(phone2TextField, errorHeightConstraint:phone2ErrorHeightConstraint) //remove any existing errors
                 return true
             }
         }
