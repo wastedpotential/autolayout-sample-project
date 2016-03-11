@@ -18,25 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-RT-ndT" userLabel="footer view">
-                                <rect key="frame" x="0.0" y="542" width="600" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJz-xs-9o8">
-                                        <rect key="frame" x="20" y="12" width="560" height="34"/>
-                                        <string key="text">This is some legal copy. It might be long enough to wrap to multiple lines on some devices. The footer will expand to contain it.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90575678660000003" green="0.90575678660000003" blue="0.90575678660000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="CJz-xs-9o8" secondAttribute="trailing" constant="20" id="7EQ-XZ-UPf"/>
-                                    <constraint firstAttribute="bottom" secondItem="CJz-xs-9o8" secondAttribute="bottom" constant="12" id="7PI-7G-f3v"/>
-                                    <constraint firstItem="CJz-xs-9o8" firstAttribute="top" secondItem="hsJ-RT-ndT" secondAttribute="top" constant="12" id="86G-VE-HwL"/>
-                                    <constraint firstItem="CJz-xs-9o8" firstAttribute="leading" secondItem="hsJ-RT-ndT" secondAttribute="leading" constant="20" id="YCW-EK-5yZ"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygJ-Na-AgO" userLabel="content wrapper view">
                                 <rect key="frame" x="20" y="64" width="560" height="478"/>
                                 <subviews>
@@ -295,6 +276,25 @@
                                         <exclude reference="SIE-Nx-Uey"/>
                                     </mask>
                                 </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-RT-ndT" userLabel="footer view">
+                                <rect key="frame" x="0.0" y="542" width="600" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJz-xs-9o8">
+                                        <rect key="frame" x="20" y="12" width="560" height="34"/>
+                                        <string key="text">This is some legal copy. It might be long enough to wrap to multiple lines on some devices. The footer will expand to contain it.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90575678660000003" green="0.90575678660000003" blue="0.90575678660000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CJz-xs-9o8" secondAttribute="trailing" constant="20" id="7EQ-XZ-UPf"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJz-xs-9o8" secondAttribute="bottom" constant="12" id="7PI-7G-f3v"/>
+                                    <constraint firstItem="CJz-xs-9o8" firstAttribute="top" secondItem="hsJ-RT-ndT" secondAttribute="top" constant="12" id="86G-VE-HwL"/>
+                                    <constraint firstItem="CJz-xs-9o8" firstAttribute="leading" secondItem="hsJ-RT-ndT" secondAttribute="leading" constant="20" id="YCW-EK-5yZ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
