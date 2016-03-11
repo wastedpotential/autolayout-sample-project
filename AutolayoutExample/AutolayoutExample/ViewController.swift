@@ -20,13 +20,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phone2ErrorLabel: UILabel!
     @IBOutlet weak var phone2ErrorHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    @IBOutlet weak var emailErrorHeightConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phone1ErrorHeightConstraint.constant = 0
         phone2ErrorHeightConstraint.constant = 0
-
+        emailErrorHeightConstraint.constant = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.layoutSubviews() //this line fixes an animation bug in the textfield
         validatePhone1()
         validatePhone2()
-
+        validateEmail()
     }
     
     
@@ -78,6 +81,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             else {
                 hideError(phone2TextField, errorHeightConstraint:phone2ErrorHeightConstraint) //remove any existing errors
+                return true
+            }
+        }
+        return true
+    }
+    
+    func validateEmail() -> Bool {
+        if let email = emailTextField.text {
+            if email.characters.count > 0 {
+                showError(emailTextField, errorLabel:emailErrorLabel, errorHeightConstraint:emailErrorHeightConstraint, errorText: "There is an email error")
+                return false
+            }
+            else {
+                hideError(emailTextField, errorHeightConstraint:emailErrorHeightConstraint) //remove any existing errors
                 return true
             }
         }
