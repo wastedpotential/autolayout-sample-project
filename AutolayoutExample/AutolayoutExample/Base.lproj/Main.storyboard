@@ -89,14 +89,47 @@
                                             <constraint firstItem="MGv-1v-JYf" firstAttribute="top" secondItem="sg9-K7-rQP" secondAttribute="top" id="8xk-hN-8xf"/>
                                             <constraint firstAttribute="trailing" secondItem="mNc-hI-HzY" secondAttribute="trailing" id="BKz-7F-v6s"/>
                                             <constraint firstAttribute="trailing" secondItem="t5Q-Jc-PtY" secondAttribute="trailing" id="D9Q-dK-8sy"/>
+                                            <constraint firstItem="WEK-EX-Db9" firstAttribute="leading" secondItem="t5Q-Jc-PtY" secondAttribute="trailing" constant="22" id="H7e-OR-igN">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="12"/>
+                                            </constraint>
                                             <constraint firstItem="mNc-hI-HzY" firstAttribute="top" secondItem="t5Q-Jc-PtY" secondAttribute="bottom" constant="6" id="Nsr-aM-Bvp"/>
+                                            <constraint firstAttribute="bottom" secondItem="mNc-hI-HzY" secondAttribute="bottom" constant="56" id="Sgv-B1-NhX">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                            </constraint>
                                             <constraint firstItem="MGv-1v-JYf" firstAttribute="leading" secondItem="sg9-K7-rQP" secondAttribute="leading" id="b4v-Ji-4e5"/>
                                             <constraint firstAttribute="trailing" secondItem="MGv-1v-JYf" secondAttribute="trailing" id="dW9-0B-Hc8"/>
                                             <constraint firstAttribute="bottom" secondItem="WEK-EX-Db9" secondAttribute="bottom" constant="20" id="eLN-iJ-ofm"/>
+                                            <constraint firstItem="WEK-EX-Db9" firstAttribute="height" secondItem="t5Q-Jc-PtY" secondAttribute="height" id="feR-dl-dPt"/>
                                             <constraint firstItem="t5Q-Jc-PtY" firstAttribute="top" secondItem="MGv-1v-JYf" secondAttribute="bottom" constant="12" id="g3T-Nu-lyQ"/>
+                                            <constraint firstItem="WEK-EX-Db9" firstAttribute="centerY" secondItem="t5Q-Jc-PtY" secondAttribute="centerY" id="ouQ-Hj-pnM"/>
                                             <constraint firstItem="t5Q-Jc-PtY" firstAttribute="leading" secondItem="sg9-K7-rQP" secondAttribute="leading" id="qOU-0V-LYa"/>
                                             <constraint firstItem="WEK-EX-Db9" firstAttribute="leading" secondItem="sg9-K7-rQP" secondAttribute="leading" id="qeW-Ot-2Dp"/>
+                                            <constraint firstAttribute="trailing" secondItem="WEK-EX-Db9" secondAttribute="trailing" constant="57" id="wjS-aq-toF">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                                            </constraint>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Sgv-B1-NhX"/>
+                                                <exclude reference="H7e-OR-igN"/>
+                                                <exclude reference="feR-dl-dPt"/>
+                                                <exclude reference="ouQ-Hj-pnM"/>
+                                                <exclude reference="wjS-aq-toF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="D9Q-dK-8sy"/>
+                                                <include reference="Sgv-B1-NhX"/>
+                                                <exclude reference="6Ls-fL-uUS"/>
+                                                <include reference="H7e-OR-igN"/>
+                                                <exclude reference="eLN-iJ-ofm"/>
+                                                <include reference="feR-dl-dPt"/>
+                                                <include reference="ouQ-Hj-pnM"/>
+                                                <exclude reference="qeW-Ot-2Dp"/>
+                                                <include reference="wjS-aq-toF"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="337"/>
+            <point key="canvasLocation" x="1191.75" y="336.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N85-3V-rdk">
